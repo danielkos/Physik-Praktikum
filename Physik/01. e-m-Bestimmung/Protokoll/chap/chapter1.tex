@@ -69,6 +69,7 @@ Punkt & $U_h$ [mV] & $U_h$ [mV] & $U_h$ [mV] \\
 \end{tabular} 
 \caption{Hallspannungen der Helmnholzspulenpaares}
 \end{center}
+\label{tab:Hallspanungen}
 \end{table}
 
 \begin{center}                                       
@@ -76,18 +77,19 @@ Punkt & $U_h$ [mV] & $U_h$ [mV] & $U_h$ [mV] \\
                           
 \end{center} 
 
-TABELLE MIT WERTEN IN ANHANG
-
-Abbildung BFELD zeigt die magnetische Flussdichte abhängig von den Messpunkten. Zu sehen ist, dass das Feld im Radius von $6 cm$ um den Punkt 4 recht homogen ist (siehe Abbildung \ref{fig:Bfeld}). Dieser Aspekt lässt sich mit den Eigenschaften des Helmholtzspulenpaares bezüglich der Feldhomogenität vereinbaren. Außerdem ist ein deutlicher Abfall der magnetischen Flussdichte im Punkt 8 zu sehen, da dieser außerhalb des Radius liegt
+Abbildung \ref{tab:Hallspanungen} zeigt die magnetische Flussdichte abhängig von den Messpunkten. Zu sehen ist, dass das Feld im Radius von $6 cm$ um den Punkt 4 recht homogen ist. Dieser Aspekt lässt sich mit den Eigenschaften des Helmholtzspulenpaares bezüglich der Feldhomogenität vereinbaren. Außerdem ist ein deutlicher Abfall der magnetischen Flussdichte im Punkt 8 zu sehen, da dieser außerhalb der Radius liegt
 
 \section{Kalibrieren der Hallsonde}
-Um die Hallsonde möglichst genau zu Eichen wurde sie in die Mitte der Spule eingeführt und zehn Messungen der Hallspannung durchgeführt. Anhand der Formel für lange Spulen:
+\label{KalibrierungHallsonde}
+Um die Hallsonde möglichst genau zu Eichen wurde sie in die Mitte der Spule eingeführt und zehn Messungen der Hallspannung durchgeführt. Anhand der Formel für lange Spulen kann die magnetische Flussdichte der Spule bestimmt werden:
 \begin{equation*}
 B_{spule} = \mu_0 \cdot \frac{n \cdot I}{L}
 \end{equation*}
-kann die magnetische Flussdichte der Spule bestimmt werden. Die Maßzahlen der Eichspulen sind L = 300mm, d = 20 mm, n = 750 Windungen. Für die magnetische Feldkonstante $\mu_0$ wurde der Literaturwert $4\pi \cdot 10^{-7} \frac{N}{A^2}$ verwendet.
+Der Literaturwert für $\mu_0$ liegt bei $4\pi \cdot 10^{-7} \frac{N}{A^2}$.
 %https://lp.uni-goettingen.de/get/text/4087
-
+\newline
+Die verwendete Spule hatte folgende Maßzahlen: L = 300mm, d = 20 mm, n = 750 Windungen.
+\newline
 Um die Eichgerade zu bestimmen wird das Gleichgewicht zwischen der Lorentzkraft und der elektrischen Kraft ausgenutzt:
 \begin{eqnarray*}
 F_{lorentz} &=& F_{elektrisch} \\
@@ -96,7 +98,7 @@ B_{spule} &=&\frac{1}{v \cdot d} \cdot U_h \Rightarrow m = \frac{1}{v \cdot d}
 \end{eqnarray*}
 Somit lässt sich ein linearer Zusammenhang zwischen Hallspannung und magnetischen Flussdichte herstellen. Die Steigung $m$ ist nur von der Spannung der Hallsonde abhängig und somit konstant. 
 \newline
-Sie lässt sich aus den Messwerten (siehe Tabelle \ref{tab:eichspule}) mit linearer Regression (siehe Abbildung BLABLABAL) berechnen und liegt bei $m = 0.146 \frac{s}{m^2}$. Außerdem stimmen die gemessenen Hallspannungen etwa mit den Messungen aus ref{•} überein.
+Sie lässt sich aus den Messwerten (siehe Tabelle \ref{tab:eichspule}) mit linearer Regression (siehe Abbildung \ref{fig:Eichspulengerade}) berechnen und liegt bei $m = 0.146 \frac{s}{m^2}$. Außerdem stimmen die gemessenen Hallspannungen etwa mit den Messungen aus ref{•} überein.
 
 \begin{minipage}[h]{0.35\linewidth}
 
@@ -137,6 +139,7 @@ I [A] & $U_h$ [mV] & $B_{spule}$ [mT] \\
 \end{tabular} 
 \captionof{table}{Berechnete magnetische Flussdichte der Eichspule}
 \label{tab:eichspule}
+
 \end{minipage}
 \hfill
 \begin{minipage}[h]{0.6\linewidth}
@@ -194,6 +197,7 @@ I [A] & $U_h$ [mV] & $B_{spule}$ [mT] \\
     
 
 \section{Vergleich zwischen gemessenen und berechneten Wert des Mittenfeldes zwischen den Helmholtzspulen}
+\label{WertVergleich}
 Um die Genauigkeit unserer Messwerte und dem daraus berechneten Magnetfeld zu überprüfen haben wir für die drei Stromstärken $1 A$,$1.5 A$, und $2 A$ unseren gemessenen als auch den Soll-Wert vergleichen. Die Abweichungen vom Sollwert sind in Prozent angegeben.
  
  In XX sieht man, dass aufgrund der zuvor beschriebenen Messunsicherheiten seitens der Messgeräte (siehe Kapitel 1,111) sowie den sich fortpflanzenden Fehlern während der Nullabstimmung als auch der in 1.2 beschrieben Eichung, Abweichungen auftreten. So erhielten wir dennoch Abweichungen die noch sehr gering sind.
@@ -202,13 +206,16 @@ Um die Genauigkeit unserer Messwerte und dem daraus berechneten Magnetfeld zu ü
  
  
 \section{Messung des Durchmessers der Elektronenkreisbahn im Fadenstrahlrohr}
+\label{MessungDurchmesser}
 \paragraph{In Abhängigkeit der Anodenspannung}
+\label{AbhaengigkeitAnodenspannung}
 Entsprechend der Aufgabenbeschreibung bauten wir den Versuch auf und bestimmten für Anodenspannungen von 125V bis 250V bei jeweils 1A und 2A die zugehörigen Durchmesser der Elektronenkreisbahn. Hierfür wählten wir einen adjazenten Abstand von 25V. Parallaxenfehler bei der Bestimmung des Durchmessers wurden gemäß Anordnung möglichst klein gehalten. Jedoch stellte sich das exakte bestimmen des Durchmessers als dennoch schwierig heraus, was an dem stellenweise diffusen Elektronenstrahl zuzuschreiben ist. Um möglichst gute Ergebnisse zu erzielen überprüften wir jeweils die Bestimmung des Durchmessers des jeweils anderen. Aufgrund der zu großen Kreisbahn und demndamit überschrittenen Messbereich unserer Versuchsanordnung konnten wir bei 1A für Anodenspannungen größer als 200V keinen Durchmesser der Kreisbahn bestimmen. Hingegen konnten wir bei 2A für alle Anodenspannungen einen Durchmesser bestimmen. So ermittelten wir die in Abbildung XX gezeigten Messwerte. 
 
 
 
 
 \paragraph{In Abhängigkeit des Spulenstroms}
+\label{AbhaengigkeitSpulenstroms}
 Nun untersuchten wir entsprechend der Aufgabenbeschreibung in b die  Durchmesser der Elektronenkreisbahn für zwei feste Beschleunigungsspannungen (150V und 250V) für Spulenströme zwischen 1A bis 2A. Hierfür wählten den adjazenten Abstand von 0.2A. Auch hier trat das soeben beschriebene Problem des Diffusen Elektronenstrahls auf. Bis auf den Messwert für 1A bei 250V konnten wir für jede Konfiguration einen Durchmesser bestimmen, welche in Abbildung XX zu sehen sind.
 
 
