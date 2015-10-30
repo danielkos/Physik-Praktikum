@@ -2,7 +2,29 @@
 \section{Untersuchung des Feldes eines Helmholtzspulenpaars}
 Um die Hallspannung zu bestimmen, bauten wir die zusätzliche Helmholtzspule mit Messplatte entsprechend der Aufgabenbeschreibung auf. Anschließend führten wir einen Nullabgleich der Hallsonde durch um den vorherrschenden geomagnetischen Feldern als auch anderen Störeinflüsse während der Messung entgegen zu wirken. Hier stellten wir bereits fest, dass kleinste Berührungen an den Messgeräten, Kabeln und anderen Anschlüssen den Nullabgleich leicht veränderten, weshalb wir bei jedem Umbau während der Abarbeitung der einzelnen Versuche, vor jeder neuen Messreihe erneut einen Nullabgleich durchführten. Wir stellten ebenso fest, dass das digitale Strommessgerät keinen konstanten Wert anzeigte und dieser während des Versuchs abnahm. Dieses Phänomen können wir nicht erklären. Vermutlich ist es durch die systematischen Fehler des Messgeräts aufgetreten. Außerdem mussten wir feststellen, dass das analoge Spannungsmessgerät ähnliche Fehler hatte.   
 
-BILD MIT PUNKTEN UND RADIUS HIER REIN
+\begin{figure}[hbtp]
+\centering
+\begin{tikzpicture}[style={font=\Large}]
+%\draw[thick,dashed] (0,0) circle (4cm);
+\filldraw[fill=blue!10!white,thick,dashed] (0,0) circle (2cm);
+\draw[|-|,thick] (-0.5,2) -- (-0.5, 3)node at (-1,2.5) {\textbf{$3cm$}};
+\draw[->,thick] (0,0) -- (1.41421356, -1.41421356)node at (1.3,-1)[above] {\textbf{$r$}};
+\draw[thick,fill] (0,3) circle (0.1cm) node at (0.3,3)[] {\textbf{$1$}};
+\draw[thick,fill] (0,2) circle (0.1cm) node at (0.3,2)[] {\textbf{$2$}};
+\draw[thick,fill] (0,1) circle (0.1cm) node at (0.3,1)[] {\textbf{$3$}};
+\draw[thick,fill] (0,0) circle (0.1cm) node at (0.3,0.2)[] {\textbf{$4$}};
+\draw[thick,fill] (0,-1) circle (0.1cm) node at (0.3,-1)[] {\textbf{$5$}};
+\draw[thick,fill] (0,-2) circle (0.1cm) node at (0.3,-2)[] {\textbf{$6$}};
+\draw[thick,fill] (0,-3) circle (0.1cm) node at (0.3,-3)[] {\textbf{$7$}};
+\draw[thick,fill] (0,-4) circle (0.1cm) node at (0.3,-4)[] {\textbf{$8$}};
+\draw[thick,fill] (-2,0) circle (0.1cm) node at (-2,0.3)[] {\textbf{$9$}};
+\draw[thick,fill] (-1,0) circle (0.1cm) node at (-1,0.3)[] {\textbf{$10$}};
+\draw[thick,fill] (1,0) circle (0.1cm) node at (1,0.3)[] {\textbf{$11$}};
+\draw[thick,fill] (2,0) circle (0.1cm) node at (2,0.3)[] {\textbf{$12$}};
+\end{tikzpicture}
+\caption{Darstellung der verwendeten Messplatte}
+\label{fig:MessPlatte}
+\end{figure}
 
 Entsprechend Anweisung seitens unserer Betreuerin, als auch den Hinweisen der Aufgabenbeschreibung maßen wir den ersten und höchsten Ausschlag der Hallspannung für die jeweilige Spulenströme von $1 A$, $1.5 A$ und $2 A$ an den vorgegebenen Positionen der Messplatte (siehe Abbildung XX). Aufgrund der zuvor erwähnten  Empfindlichkeit der  Hallsonde führten wir die Messung für $1 A$ erneut durch, da diese anfangs uns falsch erschienen.
 
