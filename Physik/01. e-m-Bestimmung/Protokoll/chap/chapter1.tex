@@ -22,11 +22,11 @@ Um die Hallspannung zu bestimmen, bauten wir die zusätzliche Helmholtzspule mit
 \draw[thick,fill] (1,0) circle (0.1cm) node at (1,0.3)[] {\textbf{$11$}};
 \draw[thick,fill] (2,0) circle (0.1cm) node at (2,0.3)[] {\textbf{$12$}};
 \end{tikzpicture}
-\caption{Darstellung der verwendeten Messplatte}
+\caption{Verwendeten Messplatte mit Umgebung des homogenen Magnetfeldes}
 \label{fig:MessPlatte}
 \end{figure}
 
-Entsprechend Anweisung seitens unserer Betreuerin, als auch den Hinweisen der Aufgabenbeschreibung maßen wir den ersten und höchsten Ausschlag der Hallspannung für die jeweilige Spulenströme von $1 A$, $1.5 A$ und $2 A$ an den vorgegebenen Positionen der Messplatte (siehe Abbildung XX). Aufgrund der zuvor erwähnten  Empfindlichkeit der  Hallsonde führten wir die Messung für $1 A$ erneut durch, da diese anfangs uns falsch erschienen.
+Entsprechend Anweisung seitens unserer Betreuerin, als auch den Hinweisen der Aufgabenbeschreibung maßen wir den ersten und höchsten Ausschlag der Hallspannung für die jeweilige Spulenströme von $1 A$, $1.5 A$ und $2 A$ an den vorgegebenen Positionen der Messplatte (siehe Abbildung \ref{fig:MessPlatte}). Aufgrund der zuvor erwähnten  Empfindlichkeit der  Hallsonde führten wir die Messung für $1 A$ erneut durch, da diese anfangs uns falsch erschienen.
 
 
 \newpage
@@ -98,8 +98,8 @@ Somit lässt sich ein linearer Zusammenhang zwischen Hallspannung und magnetisch
 \newline
 Sie lässt sich aus den Messwerten (siehe Tabelle \ref{tab:eichspule}) mit linearer Regression (siehe Abbildung BLABLABAL) berechnen und liegt bei $m = 0.146 \frac{s}{m^2}$. Außerdem stimmen die gemessenen Hallspannungen etwa mit den Messungen aus ref{•} überein.
 
-\begin{minipage}[h]{0.3\linewidth}
-	
+\begin{minipage}[h]{0.35\linewidth}
+
 \begin{tabular}{|c|c|c|}
 \hline 
 I [A] & $U_h$ [mV] & $B_{spule}$ [mT] \\ 
@@ -135,13 +135,13 @@ I [A] & $U_h$ [mV] & $B_{spule}$ [mT] \\
  \\ 
 \hline 
 \end{tabular} 
-
+\captionof{table}{Berechnete magnetische Flussdichte der Eichspule}
 \label{tab:eichspule}
-
 
 \end{minipage}
 \hfill
 \begin{minipage}[h]{0.6\linewidth}
+
 \begin{tikzpicture}[scale=0.9]
     \pgfplotsset{width=10cm,
         compat=1.10,
@@ -187,8 +187,8 @@ I [A] & $U_h$ [mV] & $B_{spule}$ [mT] \\
     \end{axis}
     \caption{Test}
 \end{tikzpicture}
-
-	\label{Bild2}
+\captionof{figure}{Eichspulengerade}
+\label{fig:Eichspulengerade}
 \end{minipage}
 
 	
