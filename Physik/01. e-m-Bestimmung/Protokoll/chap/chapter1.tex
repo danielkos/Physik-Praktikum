@@ -72,24 +72,89 @@ Punkt & $U_h$ [mV] & $U_h$ [mV] & $U_h$ [mV] \\
 \label{tab:Hallspanungen}
 \end{table}
 
+
+\begin{figure}
 \begin{center}                                       
-  \includegraphics{./include/Bfeld.pdf} 
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=0, xmax=12,
+    ymin=0, ymax=0.25,
+    axis lines=middle,
+     legend pos=outer north east,
+     grid=both,
+     minor tick num=1,
+         xlabel={Messpunkte},
+    ylabel={Hallspannung [V]}]
+]
+
+
+\addplot [color=red,only marks] table {
+1	0.105
+2	0.112
+3	0.112
+4	0.112
+5	0.122
+6	0.112
+7	0.106
+8	0.087
+9	0.108
+10	0.108
+11	0.108
+12	0.11
+};
+
+\addplot [color=blue,only marks] table {
+1	0.16
+2	0.165
+3	0.165
+4	0.165
+5	0.165
+6	0.16
+7	0.15
+8	0.12
+9	0.16
+10	0.16
+11	0.16
+12	0.16
+};
+
+\addplot [color=green,only marks] table {
+1	0.2
+2	0.21
+3	0.215
+4	0.215
+5	0.215
+6	0.21
+7	0.2
+8	0.165
+9	0.21
+10	0.215
+11	0.215
+12	0.21
+};
+
+\legend{$I=1.0A$,$I=1.5A$,$I=2.0A$}
+\end{axis}
+
+\end{tikzpicture}
+
                           
 \end{center} 
+\caption{Hallspannungsmesswerte für Stromstärken}
+\label{fig:Spannungsmesswerte}
+\end{figure}
 
-Abbildung \ref{tab:Hallspanungen} zeigt die magnetische Flussdichte abhängig von den Messpunkten. Zu sehen ist, dass das Feld im Radius von $6 cm$ um den Punkt 4 recht homogen ist. Dieser Aspekt lässt sich mit den Eigenschaften des Helmholtzspulenpaares bezüglich der Feldhomogenität vereinbaren. Außerdem ist ein deutlicher Abfall der magnetischen Flussdichte im Punkt 8 zu sehen, da dieser außerhalb der Radius liegt
+
+Abbildung \ref{fig:Spannungsmesswerte} zeigt die magnetische Flussdichte abhängig von den Messpunkten. Zu sehen ist, dass das Feld im Radius von $6 cm$ um den Punkt 4 recht homogen ist. Dieser Aspekt lässt sich mit den Eigenschaften des Helmholtzspulenpaares bezüglich der Feldhomogenität vereinbaren. Außerdem ist ein deutlicher Abfall der magnetischen Flussdichte im Punkt 8 zu sehen, da dieser außerhalb der Radius liegt
 
 \section{Kalibrieren der Hallsonde}
 \label{KalibrierungHallsonde}
-Um die Hallsonde möglichst genau zu Eichen wurde sie in die Mitte der Spule eingeführt und zehn Messungen der Hallspannung durchgeführt. Anhand der Formel für lange Spulen kann die magnetische Flussdichte der Spule bestimmt werden:
+Um die Hallsonde möglichst genau zu Eichen wurde sie in die Mitte der Spule eingeführt und zehn Messungen der Hallspannung durchgeführt. Anhand der Formel für lange Spulen:
 \begin{equation*}
 B_{spule} = \mu_0 \cdot \frac{n \cdot I}{L}
 \end{equation*}
-Der Literaturwert für $\mu_0$ liegt bei $4\pi \cdot 10^{-7} \frac{N}{A^2}$.
-%https://lp.uni-goettingen.de/get/text/4087
-\newline
-Die verwendete Spule hatte folgende Maßzahlen: L = 300mm, d = 20 mm, n = 750 Windungen.
-\newline
+kann die magnetische Flussdichte der Spule bestimmt werden. Die Maßzahlen der Eichspulen sind L = 300mm, d = 20 mm, n = 750 Windungen. Für die magnetische Feldkonstante $\mu_0$ wurde der Literaturwert $4\pi \cdot 10^{-7} \frac{N}{A^2}$ verwendet.
+
 Um die Eichgerade zu bestimmen wird das Gleichgewicht zwischen der Lorentzkraft und der elektrischen Kraft ausgenutzt:
 \begin{eqnarray*}
 F_{lorentz} &=& F_{elektrisch} \\
@@ -98,7 +163,7 @@ B_{spule} &=&\frac{1}{v \cdot d} \cdot U_h \Rightarrow m = \frac{1}{v \cdot d}
 \end{eqnarray*}
 Somit lässt sich ein linearer Zusammenhang zwischen Hallspannung und magnetischen Flussdichte herstellen. Die Steigung $m$ ist nur von der Spannung der Hallsonde abhängig und somit konstant. 
 \newline
-Sie lässt sich aus den Messwerten (siehe Tabelle \ref{tab:eichspule}) mit linearer Regression (siehe Abbildung \ref{fig:Eichspulengerade}) berechnen und liegt bei $m = 0.146 \frac{s}{m^2}$. Außerdem stimmen die gemessenen Hallspannungen etwa mit den Messungen aus ref{•} überein.
+Sie lässt sich aus den Messwerten (siehe Tabelle \ref{tab:eichspule}) mit linearer Regression (siehe Abbildung \ref{fig:Eichspulengerade}) berechnen und liegt bei $m = 0.146 \frac{s}{m^2}$. Außerdem stimmen die gemessenen Hallspannungen etwa mit den Messungen aus Tabelle \ref{HemholtzspulenpaarUntersuchung} überein.
 
 \begin{minipage}[h]{0.35\linewidth}
 
